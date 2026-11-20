@@ -34,7 +34,7 @@ a:focus-visible {
 }
 
 .site-header {
-  height: 78px;
+  min-height: 88px;
   padding: 0 7.2%;
   display: flex;
   align-items: center;
@@ -44,15 +44,30 @@ a:focus-visible {
 
 .wordmark {
   display: inline-flex;
-  align-items: baseline;
-  gap: 9px;
-  font: 700 21px/1 "Space Grotesk", sans-serif;
-  letter-spacing: -1.2px;
+  align-items: center;
+  gap: 13px;
+  font: 700 23px/1 "Space Grotesk", sans-serif;
+  letter-spacing: -1.3px;
 }
 
-.wordmark span {
+.wordmark-mark {
+  width: 88px;
+  height: 52px;
+  display: block;
+  object-fit: cover;
+  background: #111;
+  border-radius: 2px;
+}
+
+.wordmark-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.wordmark-label small {
   font: 600 9px/1 "DM Sans", sans-serif;
-  letter-spacing: 1.15px;
+  letter-spacing: 1.4px;
 }
 
 .site-header nav {
@@ -74,7 +89,7 @@ a:focus-visible {
 
 .hero {
   position: relative;
-  min-height: min(660px, calc(100svh - 78px));
+  min-height: min(660px, calc(100svh - 88px));
   padding: 96px 12.5% 90px;
   display: flex;
   align-items: center;
@@ -576,8 +591,13 @@ a:focus-visible {
   font-size: 17px;
 }
 
-.wordmark-footer span {
-  font-size: 8px;
+.wordmark-footer .wordmark-mark {
+  width: 72px;
+  height: 43px;
+}
+
+.wordmark-footer .wordmark-label small {
+  font-size: 7px;
 }
 
 .site-footer p,
@@ -606,16 +626,21 @@ a:focus-visible {
 
 @media (max-width: 760px) {
   .site-header {
-    height: 68px;
+    min-height: 74px;
     padding: 0 6%;
   }
 
   .wordmark {
-    gap: 6px;
+    gap: 9px;
     font-size: 18px;
   }
 
-  .wordmark span {
+  .wordmark-mark {
+    width: 62px;
+    height: 37px;
+  }
+
+  .wordmark-label small {
     font-size: 7px;
   }
 
@@ -716,7 +741,12 @@ a:focus-visible {
     font-size: 16px;
   }
 
-  .wordmark span {
+  .wordmark-mark {
+    width: 50px;
+    height: 30px;
+  }
+
+  .wordmark-label small {
     font-size: 6px;
     letter-spacing: 0.7px;
   }

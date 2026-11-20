@@ -158,8 +158,6 @@ a:focus-visible {
   top: 50%;
   width: min(31vw, 380px);
   aspect-ratio: 1;
-  border: 1px solid #4a4a4a;
-  border-radius: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -167,20 +165,6 @@ a:focus-visible {
   justify-content: center;
   color: #fff;
   text-align: center;
-}
-
-.hero-mark::before,
-.hero-mark::after {
-  position: absolute;
-  inset: 12%;
-  border: 1px solid #333;
-  border-radius: 50%;
-  content: "";
-}
-
-.hero-mark::after {
-  inset: 25%;
-  border-color: #4a4a4a;
 }
 
 .hero-mark > span {
